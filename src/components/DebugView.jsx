@@ -15,6 +15,5 @@ export default function DebugView(props:Props):React.MixedElement {
 	console.log({recipes});
 
 	return <div>
-		debug time
 	</div>
 }
