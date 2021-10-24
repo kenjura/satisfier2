@@ -22,7 +22,7 @@ export interface IRecipe {
   stage?: number;
   building?: string;
   isAlternate: boolean;
-  altScore?: number;
+  altScore: number;
 }
 
 export default class Recipe {
@@ -42,8 +42,9 @@ export default class Recipe {
   stage: ?number;
   building: ?string;
   isAlternate: ?boolean;
-  altScore: ?number;
+  altScore: number;
   static findAll: () => Array<Recipe>;
+  static findAlternateRecipes: () => Array<Recipe>;
 
   constructor(props: IRecipe) {
     if (props) {
@@ -53,6 +54,7 @@ export default class Recipe {
 }
 
 Recipe.findAll = moize(findAll);
+Recipe.findAlternateRecipes = moize(findAlternateRecipes);
 
 function findAll() {
   const data = rfdc(rawRecipes);
@@ -73,10 +75,15 @@ function findAll() {
         byproductPart: new Part({ name: rawRecipe["Byproduct"] }),
         byproductQuantity: Number(rawRecipe["QB"]),
         isAlternate: rawRecipe["Alternate"] === "yes",
-        altScore: Number(rawRecipe["Alt Score"]),
+        altScore: Number(rawRecipe["Alt Score"] || 0),
         stage: Number(rawRecipe["Stage"]),
         building: rawRecipe["Building"],
       })
   );
   return recipes;
+}
+
+function findAlternateRecipes() {
+  const recipes = findAll();
+  return recipes.filter((recipe: Recipe) => recipe.isAlternate);
 }

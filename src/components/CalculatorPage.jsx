@@ -1,5 +1,7 @@
 // @flow
 
+import type { DesiredPart as DesiredPartType } from '../model/DesiredPart';
+
 import * as React from 'react';
 import Part from '../model/Part';
 import { v4 as uuidv4 } from 'uuid';
@@ -11,7 +13,7 @@ const TEMP_DESIRED_PARTS = [
 ];
 
 export default function CalculatorPage():React.MixedElement {
-    const [ desiredParts, setDesiredParts ] = useState(TEMP_DESIRED_PARTS);
+    const [ desiredParts:DesiredPartType, setDesiredParts ] = useState(TEMP_DESIRED_PARTS);
 
     const onDesiredPartChange = (desiredPart, changes:DesiredPartChange) => {
         let newDesiredParts = [...desiredParts];
