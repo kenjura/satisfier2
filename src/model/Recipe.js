@@ -54,14 +54,6 @@ export default class Recipe {
 
 Recipe.findAll = moize(findAll);
 
-const recipe1 = new Recipe({
-  name: "floog",
-  outputPart: new Part({ name: "schmarf" }),
-  outputQuantity: 1,
-  inputPart1: new Part({ name: "larbo" }),
-  inputQuantity1: 4,
-});
-
 function findAll() {
   const data = rfdc(rawRecipes);
   const recipes = rawRecipes.map(

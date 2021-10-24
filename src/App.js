@@ -1,4 +1,5 @@
 import DebugView from "./components/DebugView";
+import CalculatorPage from "./components/CalculatorPage";
 import RecipesPage from "./components/RecipesPage";
 import Nav from "./components/Nav";
 import logo from "./logo.svg";
@@ -15,7 +16,9 @@ function App() {
 
       <DebugView />
       <section id="main">
-        <Route path="/calculator">Calculator</Route>
+        <Route path="/calculator">
+          <CalculatorPage />
+        </Route>
         <Route path="/recipes">
           <RecipesPage />
         </Route>
