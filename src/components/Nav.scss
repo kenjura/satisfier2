@@ -1,0 +1,22 @@
+
+nav#nav-main {
+    grid-column: 3;
+    text-align: center;
+    a {
+        color: inherit;
+        display: inline-block;
+        font-size:  150%;
+        padding: 1em 2em;
+        text-decoration: none;
+    }
+    a.active {
+        border-bottom: 2px solid;
+        // color: var(--color-highlight);
+        // text-shadow: 0 0 4px var(--color-highlight);
+        box-shadow: 0 -2px 0px 0px var(--color-highlight-2) inset
+    }
+    a:hover {
+        border-bottom: 2px solid;
+    }
+  }
+  
