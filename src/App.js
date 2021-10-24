@@ -1,6 +1,6 @@
 import DebugView from './components/DebugView';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { Link, Route, useRoute } from "wouter";
 
 

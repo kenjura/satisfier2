@@ -1,3 +1,6 @@
+# 0.3.0
+- Added SASS/SCSS
+
 # 0.2.0
 - Added wouter
 - Added rudimentary CSS
