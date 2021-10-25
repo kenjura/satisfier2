@@ -1,3 +1,7 @@
+# 0.6.0
+- Calculator actually works
+- cleaned up lint issues
+
 # 0.5.0
 - Added CalculatorPage (with desired part selector)
 

@@ -1,9 +1,7 @@
 // @flow
 
-import type { Building } from '../model/Building';
-import type {
-  DesiredPart as DesiredPartType,
-} from "../model/DesiredPart";
+import type { Building } from "../model/Building";
+import type { DesiredPart as DesiredPartType } from "../model/DesiredPart";
 
 import Part from "../model/Part";
 import Recipe from "../model/Recipe";
@@ -43,7 +41,6 @@ export function getBuildingsForDesiredParts(
 
   return uniqueBuildings;
 }
-
 
 export function convertDesiredPartToPartAndQuantity(
   desiredPart: DesiredPartType,
@@ -87,7 +84,7 @@ export function getBuildingsForPart(
   const buildings = [
     {
       recipe,
-      type: recipe.building,
+      type: recipe.building || "",
       buildingQuantity,
     },
   ];
