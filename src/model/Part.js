@@ -1,5 +1,5 @@
 // @flow
-
+import moize from "moize";
 import Recipe from "./Recipe";
 
 export interface IPart {
@@ -15,11 +15,12 @@ export default class Part {
   }
 }
 
-Part.findAll = (): Array<Part> => {
+Part.findAll = moize(findAll);
+
+function findAll(): Array<Part> {
   const recipes = Recipe.findAll();
   let partNames = new Set<string>();
   recipes.forEach((recipe) => partNames.add(recipe.outputPart.name));
   return Array.from(partNames).map((partName) => new Part({ name: partName }));
 };
 
-const part1: Part = new Part({ name: "blarg" });

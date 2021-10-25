@@ -6,7 +6,7 @@ import * as React from 'react';
 import Part from '../model/Part';
 import Recipe from '../model/Recipe';
 import { v4 as uuidv4 } from 'uuid';
-import { useMemo, useReducer, useState } from "react";
+import { useState } from "react";
 import { getBuildingsForDesiredParts } from "../helper/calculator";
 
 const TEMP_DESIRED_PARTS = [
@@ -79,10 +79,10 @@ export default function CalculatorPage():React.MixedElement {
             </thead>
             <tbody>
                 {buildings.map(building => <tr key={building.recipe.name}>
-                    <td>{building.buildingQuantity.toPrecision(2)}</td>
+                    <td>{Math.round(building.buildingQuantity*100)/100}</td>
                     <td>{building.type}</td>
                     <td>{building.recipe.name}</td>
-                    <td>{building.recipe.outputQuantity * building.buildingQuantity}</td>
+                    <td>{Math.round(building.recipe.outputQuantity * building.buildingQuantity * 100)/100}</td>
                     <td>{building.recipe.stage}</td>
                 </tr>)}
             </tbody>
@@ -104,7 +104,7 @@ type DesiredPartProps = {
 }
 
 function DesiredPart(props:DesiredPartProps):React.MixedElement {
-    const parts = useMemo(Part.findAll);
+    const parts = Part.findAll()
 
     return <div>
         <select value={props.name} onChange={event => props.onNameChange(event.target.value)}>

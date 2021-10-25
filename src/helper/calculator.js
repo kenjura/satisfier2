@@ -1,18 +1,12 @@
 // @flow
 
+import type { Building } from '../model/Building';
 import type {
-  DesiredPart,
   DesiredPart as DesiredPartType,
 } from "../model/DesiredPart";
 
-// import { getAlternateRecipes, getPart } from "../model/getAllParts";
 import Part from "../model/Part";
 import Recipe from "../model/Recipe";
-
-import rfdc from "rfdc/default";
-import { v4 as uuidv4 } from "uuid";
-
-const alternateRecipes = Recipe.findAlternateRecipes();
 
 export function getBuildingsForDesiredParts(
   desiredParts: Array<DesiredPartType>,
@@ -50,11 +44,6 @@ export function getBuildingsForDesiredParts(
   return uniqueBuildings;
 }
 
-type Building = {
-  recipe: Recipe,
-  type: string,
-  buildingQuantity: number,
-};
 
 export function convertDesiredPartToPartAndQuantity(
   desiredPart: DesiredPartType,

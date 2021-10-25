@@ -1,10 +1,8 @@
-import DebugView from "./components/DebugView";
 import CalculatorPage from "./components/CalculatorPage";
 import RecipesPage from "./components/RecipesPage";
 import Nav from "./components/Nav";
-import logo from "./logo.svg";
 import "./App.scss";
-import { Link, Route, useRoute } from "wouter";
+import { Route } from "wouter";
 import * as React from "react";
 
 function App() {
@@ -14,7 +12,6 @@ function App() {
 
       <Nav />
 
-      <DebugView />
       <section id="main">
         <Route path="/calculator">
           <CalculatorPage />
