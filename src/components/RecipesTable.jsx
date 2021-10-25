@@ -36,7 +36,7 @@ export default function RecipesTable({ recipes }:Props):React.MixedElement {
                     <td>{recipe.name}</td>
                     <td>{recipe.outputPart.name}-{recipe.altScore}</td>
                     <td>{recipe.outputQuantity}</td>
-                    <td>{recipe.inputPart1.name}</td>
+                    <td>{recipe.inputPart1?.name}</td>
                     <td>{recipe.inputQuantity1}</td>
                     <td>{recipe.inputPart2?.name}</td>
                     <td>{recipe.inputQuantity2}</td>

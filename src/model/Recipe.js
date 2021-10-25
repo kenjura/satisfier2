@@ -9,8 +9,8 @@ export interface IRecipe {
   name: string;
   outputPart: Part;
   outputQuantity: number;
-  inputPart1: Part;
-  inputQuantity1: number;
+  inputPart1?: Part;
+  inputQuantity1?: number;
   inputPart2?: Part;
   inputQuantity2?: number;
   inputPart3?: Part;
@@ -29,8 +29,8 @@ export default class Recipe {
   name: string;
   outputPart: Part;
   outputQuantity: number;
-  inputPart1: Part;
-  inputQuantity1: number;
+  inputPart1: ?Part;
+  inputQuantity1: ?number;
   inputPart2: ?Part;
   inputQuantity2: ?number;
   inputPart3: ?Part;
@@ -42,7 +42,7 @@ export default class Recipe {
   stage: ?number;
   building: ?string;
   isAlternate: ?boolean;
-  altScore: number;
+  altScore: number = 0;
   static findAll: () => Array<Recipe>;
   static findAlternateRecipes: () => Array<Recipe>;
 
