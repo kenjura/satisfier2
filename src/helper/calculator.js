@@ -51,24 +51,25 @@ export default function calculate(
   return [];
 }
 
-export function getBestRecipeForEachPart(
-  parts: Array<Part>,
-  recipes: Array<Recipe>
-): Array<Recipe> {
-  return parts.map((part) => {
-    const allRecipesForPart = recipes.filter(
-      (recipe) => recipe.outputPart.name === part.name
-    );
-    // TODO: filter by enabledAlts
-    const bestRecipesForPart = allRecipesForPart.sort(
-      ({ altScore: a }, { altScore: b }) => {
-        if (a > b) return -1;
-        if (a < b) return 1;
-        return 0;
-      }
-    );
-    return bestRecipesForPart[0]; // TODO: detect if this is null or undefined somehow
-  });
+export function getBestRecipeForPart(
+  part: Part,
+  recipes: Array<Recipe>,
+  enabledAlts: Array<Recipe>
+): Recipe {
+  const allRecipesForPart = recipes.filter(
+    (recipe) => recipe.outputPart.name === part.name
+  );
+  const enabledRecipesForPart = allRecipesForPart.filter(
+    (recipe) => enabledAlts.includes(recipe) // hmm
+  );
+  const bestRecipesForPart = enabledRecipesForPart.sort(
+    ({ altScore: a }, { altScore: b }) => {
+      if (a > b) return -1;
+      if (a < b) return 1;
+      return 0;
+    }
+  );
+  return bestRecipesForPart[0]; // TODO: detect if this is null or undefined somehow
 }
 
 /*
