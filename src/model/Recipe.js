@@ -19,7 +19,7 @@ export interface IRecipe {
   inputQuantity4?: number;
   byproductPart?: Part;
   byproductQuantity?: number;
-  stage?: number;
+  stage: number;
   building?: string;
   isAlternate: boolean;
   altScore: number;
@@ -39,7 +39,7 @@ export default class Recipe {
   inputQuantity4: ?number;
   byproductPart: ?Part;
   byproductQuantity: ?number;
-  stage: ?number;
+  stage: number = 0;
   building: ?string;
   isAlternate: ?boolean;
   altScore: number = 0;
@@ -56,30 +56,34 @@ export default class Recipe {
 Recipe.findAll = moize(findAll);
 Recipe.findAlternateRecipes = moize(findAlternateRecipes);
 
+const FORBIDDEN_RECIPES = ["Recycled Rubber", "Recycled Plastic"];
+
 function findAll() {
   const data = rfdc(rawRecipes);
-  const recipes = rawRecipes.map(
-    (rawRecipe) =>
-      new Recipe({
-        name: rawRecipe.Recipe,
-        outputPart: new Part({ name: rawRecipe["Output"] }),
-        outputQuantity: Number(rawRecipe["Output qty/min"]),
-        inputPart1: new Part({ name: rawRecipe["Item 1"] }),
-        inputQuantity1: Number(rawRecipe["Q1"]),
-        inputPart2: new Part({ name: rawRecipe["Item 2"] }),
-        inputQuantity2: Number(rawRecipe["Q2"]),
-        inputPart3: new Part({ name: rawRecipe["Item 3"] }),
-        inputQuantity3: Number(rawRecipe["Q3"]),
-        inputPart4: new Part({ name: rawRecipe["Item 4"] }),
-        inputQuantity4: Number(rawRecipe["Q4"]),
-        byproductPart: new Part({ name: rawRecipe["Byproduct"] }),
-        byproductQuantity: Number(rawRecipe["QB"]),
-        isAlternate: rawRecipe["Alternate"] === "yes",
-        altScore: Number(rawRecipe["Alt Score"] || 0),
-        stage: Number(rawRecipe["Stage"]),
-        building: rawRecipe["Building"],
-      })
-  );
+  const recipes = data
+    .filter((recipe) => FORBIDDEN_RECIPES.indexOf(recipe.Recipe) < 0) // TODO: figure out a way to detect circular dependencies without a forbidden recipe list
+    .map(
+      (rawRecipe) =>
+        new Recipe({
+          name: rawRecipe.Recipe,
+          outputPart: new Part({ name: rawRecipe["Output"] }),
+          outputQuantity: Number(rawRecipe["Output qty/min"]),
+          inputPart1: new Part({ name: rawRecipe["Item 1"] }),
+          inputQuantity1: Number(rawRecipe["Q1"]),
+          inputPart2: new Part({ name: rawRecipe["Item 2"] }),
+          inputQuantity2: Number(rawRecipe["Q2"]),
+          inputPart3: new Part({ name: rawRecipe["Item 3"] }),
+          inputQuantity3: Number(rawRecipe["Q3"]),
+          inputPart4: new Part({ name: rawRecipe["Item 4"] }),
+          inputQuantity4: Number(rawRecipe["Q4"]),
+          byproductPart: new Part({ name: rawRecipe["Byproduct"] }),
+          byproductQuantity: Number(rawRecipe["QB"]),
+          isAlternate: rawRecipe["Alternate"] === "yes",
+          altScore: Number(rawRecipe["Alt Score"] || 0),
+          stage: Number(rawRecipe["Stage"]),
+          building: rawRecipe["Building"],
+        })
+    );
   return recipes;
 }
 

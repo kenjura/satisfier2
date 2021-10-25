@@ -1,6 +1,9 @@
 // @flow
 
-import type { DesiredPart as DesiredPartType } from "../model/DesiredPart";
+import type {
+  DesiredPart,
+  DesiredPart as DesiredPartType,
+} from "../model/DesiredPart";
 
 // import { getAlternateRecipes, getPart } from "../model/getAllParts";
 import Part from "../model/Part";
@@ -11,78 +14,141 @@ import { v4 as uuidv4 } from "uuid";
 
 const alternateRecipes = Recipe.findAlternateRecipes();
 
-type Building = {
-  name: string,
-  quantity: number,
-  recipe: Recipe,
-};
-
-export default function calculate(
+export function getBuildingsForDesiredParts(
   desiredParts: Array<DesiredPartType>,
+  recipes: Array<Recipe>,
   enabledAlts: Array<Recipe>
 ): Array<Building> {
-  //   let buildingList = Object.values(rfdc(desiredParts));
-  const recipes = Recipe.findAll();
+  const unmergedBuildingList = desiredParts
+    .map((desiredPart) => {
+      const { part, quantity } = convertDesiredPartToPartAndQuantity(
+        desiredPart,
+        recipes,
+        enabledAlts
+      );
+      return getBuildingsForPart(part, quantity, recipes, enabledAlts);
+    })
+    .flat();
 
-  /**
-   * for each desired part...
-   * - for each input part...
-   *   - find all recipes that produce that part
-   *     - to do this, filter all recipes by part name, then filter again by enabledAlts
-   *   - sort by altScore (WARNING: this assumes alts are ALWAYS better than non-alt)
-   *   - return recipe
-   * hold on, not yet done
-   * ...
-   * alternate implemenation
-   * - step 1: come up with a list of all parts needed
-   * - step 2: for each part, choose best recipe total all quantities
-   * ...
-   * alt 2
-   * - map each part in global part list...
-   *   - return best recipe
-   * - for each part in list of parts with only best recipes...
-   *   - go through desiredPart list, recursing through dependencies, returning a list of all dependent recipes
-   *   - go through dependentRecipes list, accumulating part quantities in a map
-   *   - (max complexity = part count * desiredPart (always less than part count) * max depth, thus O(n^2)*max depth, where n is a few dozen)
-   * - with all part quantities in hand, calculate buildings and return
-  
-   */
-  //
-
-  const allParts = Part.findAll();
-  const bestRecipeForEachPart = allParts.map((part) =>
-    getBestRecipeForPart(part, recipes, enabledAlts)
+  const nonUniqueOutputPartNames = unmergedBuildingList.map(
+    (building) => building.recipe.outputPart.name
   );
+  const uniqueOutputPartNames = [...new Set(nonUniqueOutputPartNames)];
+  const uniqueBuildings = uniqueOutputPartNames.map((outputPartName) => {
+    const allBuildingsOfPart = unmergedBuildingList.filter(
+      (building) => building.recipe.outputPart.name === outputPartName
+    );
 
-  return [];
+    const newBuildingQuantity = allBuildingsOfPart
+      .map((building) => building.buildingQuantity)
+      .reduce((p, c) => c + p, 0);
+    const recipe = allBuildingsOfPart[0].recipe;
+    const type = allBuildingsOfPart[0].recipe.building || "";
+    return { recipe, type, buildingQuantity: newBuildingQuantity };
+  });
+
+  return uniqueBuildings;
+}
+
+type Building = {
+  recipe: Recipe,
+  type: string,
+  buildingQuantity: number,
+};
+
+export function convertDesiredPartToPartAndQuantity(
+  desiredPart: DesiredPartType,
+  recipes: Array<Recipe>,
+  enabledAlts: Array<Recipe>
+): {
+  part: Part,
+  quantity: number,
+} {
+  const part = new Part({ name: desiredPart.name }); // todo: don't fake it, grab a real Part
+  const recipe = getBestRecipeForPart(part, recipes, enabledAlts);
+  const quantity = desiredPart.buildingQuantity * recipe.outputQuantity;
+
+  return {
+    part,
+    quantity,
+  };
 }
 
 /**
  *  recipe: a recipe which may have dependent recipes
  *  recipes: an array of all recipes, with only one recipe per part
+ * TODO fix this description
  */
-export function getDependentRecipes(
-  recipe: ?Recipe,
-  recipes: Array<Recipe>
-): Array<Recipe> {
-  // todo: validate recipes has only one recipe per part
-  if (!recipe) return [];
-  const dependentRecipes = [recipe];
-  if (recipe.inputPart1) {
-    const input1Recipe = recipes.find(
-      (r) => r.outputPart.name === recipe.inputPart1?.name
-    );
-    if (input1Recipe) {
-      dependentRecipes.push(input1Recipe);
-      const dependencies = getDependentRecipes(input1Recipe, recipes);
-      dependentRecipes.push(...dependencies);
-    } else {
-      throw new Error(
-        `no recipe found for part "${recipe.inputPart1?.name || ""}`
-      );
-    }
+export function getBuildingsForPart(
+  // desiredPart: DesiredPartType,
+  part: Part,
+  quantity: number,
+  recipes: Array<Recipe>,
+  enabledAlts: Array<Recipe>
+): Array<Building> {
+  const recipe = getBestRecipeForPart(part, recipes, enabledAlts);
+  if (!recipe) {
+    debugger;
+    throw new Error(`unable to find recipe for part "${part.name}"`);
   }
-  return dependentRecipes;
+
+  // part = high speed connector, quantity = 15, buildingQuantity = 4
+  const buildingQuantity = quantity / recipe.outputQuantity;
+
+  const buildings = [
+    {
+      recipe,
+      type: recipe.building,
+      buildingQuantity,
+    },
+  ];
+
+  if (recipe.inputPart1 && recipe.inputPart1.name !== "") {
+    // TODO: loop this
+    buildings.push(
+      ...getBuildingsForPart(
+        recipe.inputPart1,
+        (recipe.inputQuantity1 || 0) * buildingQuantity,
+        recipes,
+        enabledAlts
+      )
+    );
+  }
+
+  if (recipe.inputPart2 && recipe.inputPart2.name !== "") {
+    buildings.push(
+      ...getBuildingsForPart(
+        recipe.inputPart2,
+        (recipe.inputQuantity2 || 0) * buildingQuantity,
+        recipes,
+        enabledAlts
+      )
+    );
+  }
+
+  if (recipe.inputPart3 && recipe.inputPart3.name !== "") {
+    buildings.push(
+      ...getBuildingsForPart(
+        recipe.inputPart3,
+        (recipe.inputQuantity3 || 0) * buildingQuantity,
+        recipes,
+        enabledAlts
+      )
+    );
+  }
+
+  if (recipe.inputPart4 && recipe.inputPart4.name !== "") {
+    buildings.push(
+      ...getBuildingsForPart(
+        recipe.inputPart4,
+        (recipe.inputQuantity4 || 0) * buildingQuantity,
+        recipes,
+        enabledAlts
+      )
+    );
+  }
+
+  return buildings;
 }
 
 export function getBestRecipeForPart(
@@ -137,7 +203,7 @@ export function getBestRecipeForPart(
         },
       ];
 
-      const parentBuildingQty = building.buildingQty;
+      const parentbuildingQuantity = building.buildingQuantity;
 
       subParts.forEach((sp) => {
         if (!sp.recipe) return;
@@ -153,7 +219,7 @@ export function getBestRecipeForPart(
           : subPart;
 
         const quantityOfSubPartNeeded =
-          parentBuildingQty * sp.outputQtyPerParentBuilding;
+          parentbuildingQuantity * sp.outputQtyPerParentBuilding;
         const quantityOfSubPartPerBuilding = Number(
           finalRecipe["Output qty/min"]
         );
@@ -163,7 +229,7 @@ export function getBestRecipeForPart(
         buildingList.push({
           recipe: finalRecipe.recipe,
           building: finalRecipe.Building,
-          buildingQty: quantityOfSubPartBuildingsNeeded,
+          buildingQuantity: quantityOfSubPartBuildingsNeeded,
         });
       });
 
@@ -182,12 +248,12 @@ export function getBestRecipeForPart(
     let buildingsWithRecipe = buildingList.filter(
       (building) => building.recipe === buildingRecipe
     );
-    let totalBuildingQty = buildingsWithRecipe.reduce(
-      (p, c) => c.buildingQty + p,
+    let totalbuildingQuantity = buildingsWithRecipe.reduce(
+      (p, c) => c.buildingQuantity + p,
       0
     );
 
-    buildingListMap[buildingRecipe].buildingQty = totalBuildingQty;
+    buildingListMap[buildingRecipe].buildingQuantity = totalbuildingQuantity;
 
     buildingListMap[buildingRecipe].uid = uid();
   }

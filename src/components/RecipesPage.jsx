@@ -4,7 +4,6 @@ import * as React from 'react';
 import Recipe from '../model/Recipe';
 import RecipesTable from './RecipesTable';
 import { useMemo } from 'react';
-import { getBestRecipeForEachPart } from "../helper/calculator";
 import Part from '../model/Part';
 
 const styles = {

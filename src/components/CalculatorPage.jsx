@@ -4,8 +4,10 @@ import type { DesiredPart as DesiredPartType } from '../model/DesiredPart';
 
 import * as React from 'react';
 import Part from '../model/Part';
+import Recipe from '../model/Recipe';
 import { v4 as uuidv4 } from 'uuid';
 import { useMemo, useReducer, useState } from "react";
+import { getBuildingsForDesiredParts } from "../helper/calculator";
 
 const TEMP_DESIRED_PARTS = [
     { uuid:uuidv4(), name:'Computer', buildingQuantity: 1 },
@@ -14,6 +16,7 @@ const TEMP_DESIRED_PARTS = [
 
 export default function CalculatorPage():React.MixedElement {
     const [ desiredParts:DesiredPartType, setDesiredParts ] = useState(TEMP_DESIRED_PARTS);
+    const [ buildings, setBuildings ] = useState([]);
 
     const onDesiredPartChange = (desiredPart, changes:DesiredPartChange) => {
         let newDesiredParts = [...desiredParts];
@@ -37,6 +40,19 @@ export default function CalculatorPage():React.MixedElement {
 
     }
 
+    const calculate = () => {
+        const recipes = Recipe.findAll();
+        const buildings = getBuildingsForDesiredParts(desiredParts, recipes, recipes)
+            .sort((a,b) => {
+                if (a.recipe.stage > b.recipe.stage) return -1;
+                if (a.recipe.stage < b.recipe.stage) return 1;
+                if (a.type < b.type) return 1;
+                if (a.type > b.type) return 1;
+                return 0;
+            });
+        setBuildings(buildings);
+    }
+
     return <div>
         { desiredParts.map(desiredPart => <DesiredPart 
             key={desiredPart.uuid}
@@ -48,6 +64,29 @@ export default function CalculatorPage():React.MixedElement {
         />)}
         <button onClick={onAddPart}>Add Part</button>
         <textarea value={JSON.stringify(desiredParts)} readOnly={true}></textarea>
+
+        <button onClick={calculate}>Calculate</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Building Quantity</th>
+                    <th>Building Type</th>
+                    <th>Recipe</th>
+                    <th>Output per min</th>
+                    <th>Stage</th>
+                </tr>
+            </thead>
+            <tbody>
+                {buildings.map(building => <tr key={building.recipe.name}>
+                    <td>{building.buildingQuantity.toPrecision(2)}</td>
+                    <td>{building.type}</td>
+                    <td>{building.recipe.name}</td>
+                    <td>{building.recipe.outputQuantity * building.buildingQuantity}</td>
+                    <td>{building.recipe.stage}</td>
+                </tr>)}
+            </tbody>
+        </table>
     </div>
 }
 
