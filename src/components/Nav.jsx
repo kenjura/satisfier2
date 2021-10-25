@@ -1,11 +1,11 @@
 // @flow
 
 import * as React from 'react';
-import { Link, Route, useRoute } from "wouter";
+import { Link, useRoute } from "wouter";
 
 import "./Nav.scss";
 
-export default function():React.MixedElement {
+export default function Nav():React.MixedElement {
   const [isCalculator] = useRoute("/calculator");
   const [isRecipes] = useRoute("/recipes");
 

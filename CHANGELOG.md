@@ -1,3 +1,10 @@
+# 0.6.0
+- Calculator actually works
+- cleaned up lint issues
+
+# 0.5.0
+- Added CalculatorPage (with desired part selector)
+
 # 0.4.0
 - Split Nav and RecipesPage off into separate components
 - Changed color scheme, added CSS vars for color

@@ -59,22 +59,24 @@ section#main {
 table {
 border-collapse: collapse;
 
-tr {
-  th {
-    // color: var(--color-highlight);
-    font-weight: 400;
-    text-align: left;
+  tr {
+    th {
+      // color: var(--color-highlight);
+      font-weight: 400;
+      text-align: left;
+    }
+    th, td {
+      padding: 8px 16px;
+    }
   }
-  th, td {
-    padding: 8px 16px;
+  thead tr {
+    border-bottom: 1px solid;
   }
+  tbody tr:nth-child(odd) {
+    background: rgba(0,0,0,0.125);
+  }
+
 }
-thead tr {
-  border-bottom: 1px solid;
-}
-tbody tr:nth-child(odd) {
-  background: rgba(0,0,0,0.125);
-}
-}
+
 
 
