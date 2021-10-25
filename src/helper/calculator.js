@@ -5,6 +5,7 @@ import type { DesiredPart as DesiredPartType } from "../model/DesiredPart";
 // import { getAlternateRecipes, getPart } from "../model/getAllParts";
 import Part from "../model/Part";
 import Recipe from "../model/Recipe";
+
 import rfdc from "rfdc/default";
 import { v4 as uuidv4 } from "uuid";
 
@@ -18,9 +19,10 @@ type Building = {
 
 export default function calculate(
   desiredParts: Array<DesiredPartType>,
-  enabledAlts: Array<string>
+  enabledAlts: Array<Recipe>
 ): Array<Building> {
-  let buildingList = Object.values(rfdc(desiredParts));
+  //   let buildingList = Object.values(rfdc(desiredParts));
+  const recipes = Recipe.findAll();
 
   /**
    * for each desired part...
@@ -39,7 +41,8 @@ export default function calculate(
    * - map each part in global part list...
    *   - return best recipe
    * - for each part in list of parts with only best recipes...
-   *   - go through desiredPart list, recursing through dependencies, and accumulate quantities
+   *   - go through desiredPart list, recursing through dependencies, returning a list of all dependent recipes
+   *   - go through dependentRecipes list, accumulating part quantities in a map
    *   - (max complexity = part count * desiredPart (always less than part count) * max depth, thus O(n^2)*max depth, where n is a few dozen)
    * - with all part quantities in hand, calculate buildings and return
   
@@ -47,8 +50,39 @@ export default function calculate(
   //
 
   const allParts = Part.findAll();
+  const bestRecipeForEachPart = allParts.map((part) =>
+    getBestRecipeForPart(part, recipes, enabledAlts)
+  );
 
   return [];
+}
+
+/**
+ *  recipe: a recipe which may have dependent recipes
+ *  recipes: an array of all recipes, with only one recipe per part
+ */
+export function getDependentRecipes(
+  recipe: ?Recipe,
+  recipes: Array<Recipe>
+): Array<Recipe> {
+  // todo: validate recipes has only one recipe per part
+  if (!recipe) return [];
+  const dependentRecipes = [recipe];
+  if (recipe.inputPart1) {
+    const input1Recipe = recipes.find(
+      (r) => r.outputPart.name === recipe.inputPart1?.name
+    );
+    if (input1Recipe) {
+      dependentRecipes.push(input1Recipe);
+      const dependencies = getDependentRecipes(input1Recipe, recipes);
+      dependentRecipes.push(...dependencies);
+    } else {
+      throw new Error(
+        `no recipe found for part "${recipe.inputPart1?.name || ""}`
+      );
+    }
+  }
+  return dependentRecipes;
 }
 
 export function getBestRecipeForPart(

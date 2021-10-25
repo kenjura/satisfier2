@@ -3,6 +3,7 @@ import assert from "assert/strict";
 import Part from "../model/Part.js";
 import Recipe from "../model/Recipe.js";
 import { getBestRecipeForPart } from "./calculator.js";
+import { getDependentRecipes } from "./calculator";
 
 describe("calculate", () => {
   describe("getBestRecipeForPart", () => {
@@ -26,6 +27,18 @@ describe("calculate", () => {
         );
         const bestRecipe = getBestRecipeForPart(part, recipes, enabledAlts);
         expect(bestRecipe?.name).toEqual("widget but less efficient");
+      });
+
+      test("getDependentRecipes", () => {
+        const startRecipe = recipes.find((r) => r.name === "widget");
+        const dependentRecipes = getDependentRecipes(startRecipe, recipes);
+        expect(dependentRecipes).toEqual(
+          expect.arrayContaining([
+            expect.objectContaining({ name: "widget" }),
+            expect.objectContaining({ name: "sprocket" }),
+            expect.objectContaining({ name: "thingamabob" }),
+          ])
+        );
       });
     });
   });
@@ -75,6 +88,8 @@ function getDemoData() {
       name: "sprocket",
       outputPart: parts.find((part) => part.name === "sprocket"),
       outputQuantity: 1,
+      inputPart1: parts.find((part) => part.name === "thingamabob"),
+      inputQuantity: 1.5,
     }),
     new Recipe({
       name: "thingamabob",
