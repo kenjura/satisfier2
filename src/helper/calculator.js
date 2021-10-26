@@ -52,6 +52,8 @@ export function convertDesiredPartToPartAndQuantity(
 } {
   const part = new Part({ name: desiredPart.name }); // todo: don't fake it, grab a real Part
   const recipe = getBestRecipeForPart(part, recipes, enabledAlts);
+  if (!recipe)
+    throw new Error(`could not find recipe for part "${desiredPart.name}`);
   const quantity = desiredPart.buildingQuantity * recipe.outputQuantity;
 
   return {
