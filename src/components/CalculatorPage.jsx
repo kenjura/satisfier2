@@ -109,7 +109,11 @@ type DesiredPartProps = {
 }
 
 function DesiredPart(props:DesiredPartProps):React.MixedElement {
-    const parts = Part.findAll()
+    const parts = Part.findAll().sort((a,b) => {
+        if (a.name > b.name) return 1;
+        if (a.name < b.name) return -1;
+        return 0;
+    });
 
     return <div>
         <select value={props.name} onChange={event => props.onNameChange(event.target.value)}>
