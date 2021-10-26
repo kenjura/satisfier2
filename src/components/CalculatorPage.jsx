@@ -8,6 +8,7 @@ import Recipe from '../model/Recipe';
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from "react";
 import { getBuildingsForDesiredParts } from "../helper/calculator";
+import { getEnabledAlts } from "../model/Preferences";
 
 const TEMP_DESIRED_PARTS = [
     { uuid:uuidv4(), name:'Computer', buildingQuantity: 1 },
@@ -42,12 +43,16 @@ export default function CalculatorPage():React.MixedElement {
 
     const calculate = () => {
         const recipes = Recipe.findAll();
-        const buildings = getBuildingsForDesiredParts(desiredParts, recipes, recipes)
+        const enabledAlts = getEnabledAlts();
+        const enabledAltRecipes = enabledAlts.map(alt => recipes.find(recipe => recipe.name === alt));
+        const buildings = getBuildingsForDesiredParts(desiredParts, recipes, enabledAltRecipes)
             .sort((a,b) => {
                 if (a.recipe.stage > b.recipe.stage) return -1;
                 if (a.recipe.stage < b.recipe.stage) return 1;
                 if (a.type < b.type) return 1;
-                if (a.type > b.type) return 1;
+                if (a.type > b.type) return -1;
+                if (a.recipe.name < b.recipe.name) return 1;
+                if (a.recipe.name > b.recipe.name) return -1;
                 return 0;
             });
         setBuildings(buildings);

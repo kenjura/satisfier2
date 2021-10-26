@@ -1,8 +1,14 @@
 // @flow
 
 import * as React from 'react';
+import rfdc from 'rfdc/default';
 import Recipe from '../model/Recipe';
 import RecipesTable from './RecipesTable';
+import {
+  getEnabledAlts,
+  setEnabledAlts as saveEnabledAlts,
+} from "../model/Preferences";
+import { useState } from 'react';
 
 const styles = {
     container: {
@@ -24,9 +30,23 @@ const styles = {
 }
 
 export default function RecipesPage():React.MixedElement {
+    const [ enabledAlts, setEnabledAlts ] = useState(getEnabledAlts());
     const recipes = Recipe.findAll();
 
-    return <div style={styles.container}>
-        <RecipesTable recipes={recipes} />
+    const onEnabledAltChange = (recipe, isEnabled) => {
+        let newEnabledAlts = rfdc(enabledAlts);
+        if (isEnabled) {
+            if (!newEnabledAlts.includes(recipe.name)) {
+                newEnabledAlts.push(recipe.name);
+            }
+        } else {
+            newEnabledAlts = newEnabledAlts.filter(alt => alt !== recipe.name);
+        }
+        saveEnabledAlts(newEnabledAlts);
+        setEnabledAlts(newEnabledAlts);
+    }
+
+    return <div style={styles.container}> 
+        <RecipesTable enabledAlts={enabledAlts} recipes={recipes} onEnabledAltChange={onEnabledAltChange} /> 
     </div>
 }

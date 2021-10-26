@@ -1,3 +1,8 @@
+# 0.7.0
+- Enabled editing of enabled alts
+- Enabled alts now persist to localStorage
+- Enabled alts are now considered by calculator
+
 # 0.6.0
 - Calculator actually works
 - cleaned up lint issues

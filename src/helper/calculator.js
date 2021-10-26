@@ -146,7 +146,7 @@ export function getBestRecipeForPart(
     (recipe) => recipe.outputPart.name === part.name
   );
   const enabledRecipesForPart = allRecipesForPart.filter(
-    (recipe) => enabledAlts.includes(recipe) // hmm
+    (recipe) => !recipe.isAlternate || enabledAlts.includes(recipe) // TODO: verify this comparison actually works
   );
   const bestRecipesForPart = enabledRecipesForPart.sort(
     ({ altScore: a }, { altScore: b }) => {
