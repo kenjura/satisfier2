@@ -36,7 +36,8 @@ export function getBuildingsForDesiredParts(
       .reduce((p, c) => c + p, 0);
     const recipe = allBuildingsOfPart[0].recipe;
     const type = allBuildingsOfPart[0].recipe.building || "";
-    return { recipe, type, buildingQuantity: newBuildingQuantity };
+    const stack = Math.max(...allBuildingsOfPart.map((b) => b.stack));
+    return { recipe, type, buildingQuantity: newBuildingQuantity, stack };
   });
 
   return uniqueBuildings;
@@ -72,11 +73,11 @@ export function getBuildingsForPart(
   part: Part,
   quantity: number,
   recipes: Array<Recipe>,
-  enabledAlts: Array<Recipe>
+  enabledAlts: Array<Recipe>,
+  stack: number = 0
 ): Array<Building> {
   const recipe = getBestRecipeForPart(part, recipes, enabledAlts);
   if (!recipe) {
-    debugger;
     throw new Error(`unable to find recipe for part "${part.name}"`);
   }
 
@@ -88,6 +89,7 @@ export function getBuildingsForPart(
       recipe,
       type: recipe.building || "",
       buildingQuantity,
+      stack,
     },
   ];
 
@@ -98,7 +100,8 @@ export function getBuildingsForPart(
         recipe.inputPart1,
         (recipe.inputQuantity1 || 0) * buildingQuantity,
         recipes,
-        enabledAlts
+        enabledAlts,
+        stack - 1
       )
     );
   }
@@ -109,7 +112,8 @@ export function getBuildingsForPart(
         recipe.inputPart2,
         (recipe.inputQuantity2 || 0) * buildingQuantity,
         recipes,
-        enabledAlts
+        enabledAlts,
+        stack - 1
       )
     );
   }
@@ -120,7 +124,8 @@ export function getBuildingsForPart(
         recipe.inputPart3,
         (recipe.inputQuantity3 || 0) * buildingQuantity,
         recipes,
-        enabledAlts
+        enabledAlts,
+        stack - 1
       )
     );
   }
@@ -131,7 +136,8 @@ export function getBuildingsForPart(
         recipe.inputPart4,
         (recipe.inputQuantity4 || 0) * buildingQuantity,
         recipes,
-        enabledAlts
+        enabledAlts,
+        stack - 1
       )
     );
   }

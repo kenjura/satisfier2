@@ -1,3 +1,12 @@
+# 0.8.0
+- DesiredParts are now persisted to localStorage
+- calculator is now sorted by "stack" (recursion depth, starting from desired parts). Not as good as stage, but it's reliable and automatic.
+- calculator now has an "export to TSV" button
+- removed debug textarea from CalculatorPage
+- added some debug tooltips to help mk2/mk3 planning
+- checkbox to enable alt recipe now only shows if recipe is, in fact, an alternate
+- fixed a bug in data for silicon high-speed connector
+
 # 0.7.0
 - Enabled editing of enabled alts
 - Enabled alts now persist to localStorage

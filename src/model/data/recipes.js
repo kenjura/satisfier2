@@ -1334,7 +1334,7 @@ export default [
     Byproduct: "",
     QB: "",
     MW: "",
-    Stage: "",
+    Stage: "5",
     Building: "Manufacturer",
     Alternate: "no",
     "Alt Score": "",
@@ -2377,7 +2377,7 @@ export default [
     Stage: "",
     Building: "Manufacturer",
     Alternate: "yes",
-    "Alt Score": "",
+    "Alt Score": "90.2",
   },
   {
     Recipe: "Smart Plating",
@@ -2576,7 +2576,7 @@ export default [
     MW: "",
     Stage: "2",
     Building: "Constructor",
-    Alternate: "no",
+    Alternate: "yes",
     "Alt Score": "55.6",
   },
   {
