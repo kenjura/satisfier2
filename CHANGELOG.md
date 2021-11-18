@@ -1,3 +1,6 @@
+# 0.9.0
+- Added input and byproduct parts to the CalculatorPage output
+
 # 0.8.0
 - DesiredParts are now persisted to localStorage
 - calculator is now sorted by "stack" (recursion depth, starting from desired parts). Not as good as stage, but it's reliable and automatic.

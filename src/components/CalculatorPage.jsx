@@ -58,7 +58,7 @@ export default function CalculatorPage(): React.MixedElement {
     const enabledAlts = getEnabledAlts();
     const enabledAltRecipes = enabledAlts.map((alt) =>
       recipes.find((recipe) => recipe.name === alt)
-    );
+    ).filter(Boolean);
     const buildings = getBuildingsForDesiredParts(
       desiredParts,
       recipes,
@@ -125,11 +125,16 @@ export default function CalculatorPage(): React.MixedElement {
             <th>Recipe</th>
             <th>Output per min</th>
             <th>Stage</th>
+            <th colspan="2">Input 1</th>
+            <th colspan="2">Input 2</th>
+            <th colspan="2">Input 3</th>
+            <th colspan="2">Input 4</th>
+            <th>Byproduct</th>
           </tr>
         </thead>
         <tbody>
           {buildings.map((building) => (
-            <tr key={building.recipe.name}>
+            <tr key={building.recipe.name} onClick={() => console.log(building)}>
               <td
                 title={`
                         mk2: ${(building.buildingQuantity / 1.5).toFixed(2)}
@@ -149,7 +154,17 @@ export default function CalculatorPage(): React.MixedElement {
                     100
                 ) / 100}
               </td>
-              <td>{building.recipe.stage}/{building.stack}</td>
+              <td title={`Recursion stack value: ${building.stack}`}>{building.recipe.stage}</td>
+              <td>{building.recipe.inputPart1?.name||''}</td>
+              <td>{building.recipe.inputQuantity1}</td>
+              <td>{building.recipe.inputPart2?.name||''}</td>
+              <td>{building.recipe.inputQuantity2}</td>
+              <td>{building.recipe.inputPart3?.name||''}</td>
+              <td>{building.recipe.inputQuantity3}</td>
+              <td>{building.recipe.inputPart4?.name||''}</td>
+              <td>{building.recipe.inputQuantity4}</td>
+              <td>{building.recipe.byproductPart?.name||''}</td>
+              <td>{building.recipe.byproductQuantity}</td>
             </tr>
           ))}
         </tbody>
