@@ -88,12 +88,23 @@ export default function CalculatorPage(): React.MixedElement {
           building.recipe.outputQuantity * building.buildingQuantity * 100
         ) / 100,
       stage: building.recipe.stage,
+      stack: building.stack,
+      input1Part: building.recipe.inputPart1?.name || '',
+      input1Quantity: building.recipe.inputQuantity1 || 0,
+      input2Part: building.recipe.inputPart2?.name || '',
+      input2Quantity: building.recipe.inputQuantity2 || 0,
+      input3Part: building.recipe.inputPart3?.name || '',
+      input3Quantity: building.recipe.inputQuantity3 || 0,
+      input4Part: building.recipe.inputPart4?.name || '',
+      input4Quantity: building.recipe.inputQuantity4 || 0,
+      byproductPart: building.recipe.byproductPart?.name || '',
+      byproductQuantity: building.recipe.byproductQuantity || 0,
     }));
     const tsv = [
-      "buildingQuantity\ttype\trecipe\tpart\toutputQuantity\tstage",
+      "buildingQuantity\ttype\trecipe\tpart\toutputQuantity\tstage\tinput1part\tinput1qty\tinput2part\tinput2qty\tinput3part\tinput3qty\tinput4part\tinput4qty\tbyproductPage\tbyproductQuantity",
       ...enhancedBuildings.map(
         (eb) =>
-          `${eb.buildingQuantity}\t${eb.type}\t${eb.recipe}\t${eb.part}\t${eb.outputQuantity}\t${eb.stage}`
+          `${eb.buildingQuantity}\t${eb.type}\t${eb.recipe}\t${eb.part}\t${eb.outputQuantity}\t${eb.stage}\t${eb.input1Part}\t${eb.input1Quantity}\t${eb.input2Part}\t${eb.input2Quantity}\t${eb.input3Part}\t${eb.input3Quantity}\t${eb.input4Part}\t${eb.input4Quantity}\t${eb.byproductPart}\t${eb.byproductQuantity}`
       ),
     ].join("\n");
     navigator.clipboard.writeText(tsv);
@@ -156,13 +167,13 @@ export default function CalculatorPage(): React.MixedElement {
               </td>
               <td title={`Recursion stack value: ${building.stack}`}>{building.recipe.stage}</td>
               <td>{building.recipe.inputPart1?.name||''}</td>
-              <td>{building.recipe.inputQuantity1}</td>
+              <td>{(building.recipe.inputQuantity1 || 0) * building.buildingQuantity}</td>
               <td>{building.recipe.inputPart2?.name||''}</td>
-              <td>{building.recipe.inputQuantity2}</td>
+              <td>{(building.recipe.inputQuantity2 || 0) * building.buildingQuantity}</td>
               <td>{building.recipe.inputPart3?.name||''}</td>
-              <td>{building.recipe.inputQuantity3}</td>
+              <td>{(building.recipe.inputQuantity3 || 0) * building.buildingQuantity}</td>
               <td>{building.recipe.inputPart4?.name||''}</td>
-              <td>{building.recipe.inputQuantity4}</td>
+              <td>{(building.recipe.inputQuantity4 || 0) * building.buildingQuantity}</td>
               <td>{building.recipe.byproductPart?.name||''}</td>
               <td>{building.recipe.byproductQuantity}</td>
             </tr>
