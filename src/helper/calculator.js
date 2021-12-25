@@ -36,7 +36,7 @@ export function getBuildingsForDesiredParts(
       .reduce((p, c) => c + p, 0);
     const recipe = allBuildingsOfPart[0].recipe;
     const type = allBuildingsOfPart[0].recipe.building || "";
-    const stack = Math.max(...allBuildingsOfPart.map((b) => b.stack));
+    const stack = Math.min(...allBuildingsOfPart.map((b) => b.stack));
     return { recipe, type, buildingQuantity: newBuildingQuantity, stack };
   });
 
