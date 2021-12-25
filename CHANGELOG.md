@@ -1,3 +1,9 @@
+# 0.10.0
+- Added missing recipes
+- Fixed stack logic
+- Added select all/none to recipes page
+- Added input quantities to table
+
 # 0.9.0
 - Added input and byproduct parts to the CalculatorPage output
 
