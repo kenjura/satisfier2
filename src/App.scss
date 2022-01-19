@@ -79,4 +79,25 @@ border-collapse: collapse;
 }
 
 
+button {
+    padding: 0em 1em;
+    border: none;
+    background-color: var(--color-highlight-2);
+    color: black;
+    text-transform: capitalize;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+button:hover {
+  filter: brightness(1.5);
+}
 
+input, button, select {
+    line-height: 3em;
+    height: 3em;
+    box-sizing: border-box;
+    border: 0;
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    font-size: 100%;
+}
