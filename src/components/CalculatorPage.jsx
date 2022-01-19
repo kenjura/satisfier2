@@ -19,11 +19,40 @@ const TEMP_DESIRED_PARTS = [
   { uuid: uuidv4(), name: "Supercomputer", buildingQuantity: 1 },
 ];
 
+const styles = {
+    gridContainer: {
+        display: 'grid',
+        gridTemplateColumns: '50% 16px 50%',
+    },
+    gridLeft: {
+        gridColumn: '1',
+        width: '100%',
+    },
+    gridRight: {
+        gridColumn: '3',
+        width: '100%',
+    },
+}
+
+type Meta = {
+  totalBuildings: number,
+  smelters: number,
+  foundries: number,
+  constructors: number,
+  assemblers: number,
+  manufacturers: number,
+  refineries: number,
+  blenders: number,
+  packagers: number,
+}
+
 export default function CalculatorPage(): React.MixedElement {
   const [desiredParts, setDesiredParts] = useState<Array<DesiredPartType>>(
     loadDesiredParts()
   );
   const [buildings, setBuildings] = useState<Array<Building>>([]);
+  const [meta, setMeta] = useState<Meta>({ totalBuildings:0, smelters:0 });
+  const [inputs, setInputs] = useState<Array<{ part:string, quantity:number }>>([]);
 
   const onDesiredPartChange = (desiredPart, changes: DesiredPartChange) => {
     let newDesiredParts = [...desiredParts];
@@ -75,6 +104,18 @@ export default function CalculatorPage(): React.MixedElement {
       return 0;
     });
     setBuildings(buildings);
+    setMeta({
+      totalBuildings: buildings.reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      smelters: buildings.filter(building => building.type === 'Smelter').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      foundries: buildings.filter(building => building.type === 'Foundry').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      constructors: buildings.filter(building => building.type === 'Constructor').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      assemblers: buildings.filter(building => building.type === 'Assembler').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      manufacturers: buildings.filter(building => building.type === 'Manufacturer').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      refineries: buildings.filter(building => building.type === 'Refinery').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      blenders: buildings.filter(building => building.type === 'Blender').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+      packagers: buildings.filter(building => building.type === 'Packager').reduce((p,c) => p + Math.ceil(c.buildingQuantity), 0),
+    });
+    setInputs(buildings.filter(building => !building.recipe.inputPart1?.name).map(building => ({ part:building.recipe.outputPart.name, quantity:Math.floor((building.recipe.outputQuantity * building.buildingQuantity * 100))/100 })));
   };
 
   const onCopyTSV = () => {
@@ -112,21 +153,44 @@ export default function CalculatorPage(): React.MixedElement {
 
   return (
     <div>
-      {desiredParts.map((desiredPart) => (
-        <DesiredPart
-          key={desiredPart.uuid}
-          name={desiredPart.name}
-          buildingQuantity={desiredPart.buildingQuantity}
-          onBuildingQuantityChange={(buildingQuantity) =>
-            onDesiredPartChange(desiredPart, { buildingQuantity })
-          }
-          onNameChange={(name) => onDesiredPartChange(desiredPart, { name })}
-          onDelete={() => onDesiredPartRemove(desiredPart)}
-        />
-      ))}
-      <button onClick={onAddPart}>Add Part</button>
 
-      <button onClick={calculate}>Calculate</button>
+      <div style={styles.gridContainer}>
+        <div style={styles.gridLeft}>
+          {desiredParts.map((desiredPart) => (
+            <DesiredPart
+              key={desiredPart.uuid}
+              name={desiredPart.name}
+              buildingQuantity={desiredPart.buildingQuantity}
+              onBuildingQuantityChange={(buildingQuantity) =>
+                onDesiredPartChange(desiredPart, { buildingQuantity })
+              }
+              onNameChange={(name) => onDesiredPartChange(desiredPart, { name })}
+              onDelete={() => onDesiredPartRemove(desiredPart)}
+            />
+          ))}
+          <button onClick={onAddPart}>Add Part</button>
+
+          <button onClick={calculate}>Calculate</button>
+        </div>
+        <div style={styles.gridRight}>
+          <div style={styles.gridContainer}>
+            <ul style={styles.gridLeft}>
+              <li>Total buildings: {meta.totalBuildings}</li>
+              <li>Smelters: {meta.smelters}</li>
+              <li>Constructors: {meta.constructors}</li>
+              <li>Foundries: {meta.foundries}</li>
+              <li>Assemblers: {meta.assemblers}</li>
+              <li>Manufacturers: {meta.manufacturers}</li>
+              <li>Refineries: {meta.refineries}</li>
+              <li>Blenders: {meta.blenders}</li>
+              <li>Packagers: {meta.packagers}</li>
+            </ul>
+            <ul style={styles.gridRight}>
+              {inputs.map(input => <li key={input.part}>{input.part}: {input.quantity}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <table>
         <thead>
