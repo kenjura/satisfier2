@@ -46,7 +46,24 @@ export default function RecipesPage():React.MixedElement {
         setEnabledAlts(newEnabledAlts);
     }
 
-    return <div style={styles.container}> 
-        <RecipesTable enabledAlts={enabledAlts} recipes={recipes} onEnabledAltChange={onEnabledAltChange} /> 
+    const onSelectAll = () => {
+        const allAlternateRecipes = recipes.filter(recipe => recipe.isAlternate).map(recipe => recipe.name);
+        setEnabledAlts(allAlternateRecipes);
+        saveEnabledAlts(allAlternateRecipes);
+    }
+
+    const onSelectNone = () => {
+        setEnabledAlts([]);
+        saveEnabledAlts([]);
+    }
+
+    return <div>
+        <div>
+            <button onClick={onSelectAll}>select all</button>
+            <button onClick={onSelectNone}>select none</button>
+        </div>
+        <div style={styles.container}>
+            <RecipesTable enabledAlts={enabledAlts} recipes={recipes} onEnabledAltChange={onEnabledAltChange} /> 
+        </div>
     </div>
 }

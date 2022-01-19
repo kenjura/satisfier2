@@ -37,7 +37,14 @@ export default function RecipesTable({ onEnabledAltChange, enabledAlts, recipes 
             {
                 recipes.map(recipe => 
                 <tr key={recipe.name}>
-                    <td><input type="checkbox" checked={enabledAlts.includes(recipe.name)} onChange={event => onEnabledAltChange(recipe, event.target.checked)} /></td>
+                    <td>
+                        { recipe.isAlternate ?
+                        <input 
+                            type="checkbox"                             
+                            checked={enabledAlts.includes(recipe.name)}
+                            onChange={event => onEnabledAltChange(recipe, event.target.checked)} 
+                        /> : '' }
+                     </td>
                     <td>{recipe.name}</td>
                     <td>{recipe.outputPart.name}</td>
                     <td>{recipe.outputQuantity}</td>
