@@ -19,17 +19,27 @@ const TEMP_DESIRED_PARTS = [
   { uuid: uuidv4(), name: "Supercomputer", buildingQuantity: 1 },
 ];
 
+const ALT_SCORE_THRESHOLD = {
+  MIN: 0,
+  START: 50,
+  MAX: 100,
+};
+
 const styles = {
     gridContainer: {
         display: 'grid',
-        gridTemplateColumns: '50% 16px 50%',
+        gridTemplateColumns: '1fr 16px 1fr 16px 1fr',
     },
     gridLeft: {
         gridColumn: '1',
         width: '100%',
     },
-    gridRight: {
+    gridMid: {
         gridColumn: '3',
+        width: '100%',
+    },
+    gridRight: {
+        gridColumn: '5',
         width: '100%',
     },
 }
@@ -53,6 +63,7 @@ export default function CalculatorPage(): React.MixedElement {
   const [buildings, setBuildings] = useState<Array<Building>>([]);
   const [meta, setMeta] = useState<Meta>({ totalBuildings:0, smelters:0 });
   const [inputs, setInputs] = useState<Array<{ part:string, quantity:number }>>([]);
+  const [altScoreThreshold, setAltScoreThreshold] = useState<number>(ALT_SCORE_THRESHOLD.START);
 
   const onDesiredPartChange = (desiredPart, changes: DesiredPartChange) => {
     let newDesiredParts = [...desiredParts];
@@ -85,9 +96,12 @@ export default function CalculatorPage(): React.MixedElement {
   const calculate = () => {
     const recipes = Recipe.findAll();
     const enabledAlts = getEnabledAlts();
-    const enabledAltRecipes = enabledAlts.map((alt) =>
-      recipes.find((recipe) => recipe.name === alt)
-    ).filter(Boolean);
+    const enabledAltRecipes = enabledAlts
+      .map((alt:string):?Recipe =>
+        recipes.find((recipe) => recipe.name === alt)
+      )
+      .filter(Boolean)
+      .filter((recipe:Recipe):boolean => recipe.altScore >= altScoreThreshold);
     const buildings = getBuildingsForDesiredParts(
       desiredParts,
       recipes,
@@ -151,6 +165,10 @@ export default function CalculatorPage(): React.MixedElement {
     navigator.clipboard.writeText(tsv);
   };
 
+  const onAltScoreThresholdChange = ({ target }) => {
+    setAltScoreThreshold(target.value);
+  }
+
   return (
     <div>
 
@@ -172,9 +190,15 @@ export default function CalculatorPage(): React.MixedElement {
 
           <button onClick={calculate}>Calculate</button>
         </div>
+        <div style={styles.gridMid}>
+          Alt Score Threshold
+          <input type="number" min={ALT_SCORE_THRESHOLD.MIN} max={ALT_SCORE_THRESHOLD.MAX} value={altScoreThreshold} onChange={onAltScoreThresholdChange} />
+        </div>
         <div style={styles.gridRight}>
           <div style={styles.gridContainer}>
-            <ul style={styles.gridLeft}>
+          <div style={styles.gridLeft}>
+            Buildings:
+            <ul>
               <li>Total buildings: {meta.totalBuildings}</li>
               <li>Smelters: {meta.smelters}</li>
               <li>Constructors: {meta.constructors}</li>
@@ -185,10 +209,22 @@ export default function CalculatorPage(): React.MixedElement {
               <li>Blenders: {meta.blenders}</li>
               <li>Packagers: {meta.packagers}</li>
             </ul>
-            <ul style={styles.gridRight}>
+          </div>
+          <div style={styles.gridMid}>
+            Inputs:
+            <ul>
               {inputs.map(input => <li key={input.part}>{input.part}: {input.quantity}</li>)}
             </ul>
           </div>
+          <div style={styles.gridRight}>
+            Outputs: TBI
+            <ul>
+            </ul>
+            Byproducts: TBI
+            <ul>
+            </ul>
+          </div>
+        </div>
         </div>
       </div>
 
