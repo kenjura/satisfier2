@@ -1,0 +1,10 @@
+.recipe-selector {
+    color: var(--color-highlight-2);
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        background-color: rgba(0,0,0,0.25);
+    }
+
+}

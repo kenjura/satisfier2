@@ -6,6 +6,7 @@ import type { DesiredPart as DesiredPartType } from "../model/DesiredPart";
 import * as React from "react";
 import Part from "../model/Part";
 import Recipe from "../model/Recipe";
+import RecipeSelector from "./RecipeSelector";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import { getBuildingsForDesiredParts } from "../helper/calculator";
@@ -64,6 +65,7 @@ export default function CalculatorPage(): React.MixedElement {
   const [meta, setMeta] = useState<Meta>({ totalBuildings:0, smelters:0 });
   const [inputs, setInputs] = useState<Array<{ part:string, quantity:number }>>([]);
   const [altScoreThreshold, setAltScoreThreshold] = useState<number>(ALT_SCORE_THRESHOLD.START);
+  const [preferredRecipes, setPreferredRecipes] = useState<Array<Recipe>>([]);
 
   const onDesiredPartChange = (desiredPart, changes: DesiredPartChange) => {
     let newDesiredParts = [...desiredParts];
@@ -93,6 +95,14 @@ export default function CalculatorPage(): React.MixedElement {
     setDesiredParts(newDesiredParts);
   };
 
+  const onRecipeSelectorChange = (recipe:Recipe):void => {
+    // const oldPreferredRecipes = 
+    const newPreferredRecipes = [].concat(preferredRecipes).filter(rec => rec.outputPart.name !== recipe.outputPart.name);
+    newPreferredRecipes.push(recipe);
+    setPreferredRecipes(newPreferredRecipes);
+    calculate();
+  };
+
   const calculate = () => {
     const recipes = Recipe.findAll();
     const enabledAlts = getEnabledAlts();
@@ -105,7 +115,8 @@ export default function CalculatorPage(): React.MixedElement {
     const buildings = getBuildingsForDesiredParts(
       desiredParts,
       recipes,
-      enabledAltRecipes
+      enabledAltRecipes,
+      preferredRecipes,
     ).sort((a, b) => {
       if (a.stack > b.stack) return -1;
       if (a.stack < b.stack) return 1;
@@ -257,7 +268,7 @@ export default function CalculatorPage(): React.MixedElement {
                 {Math.round(building.buildingQuantity * 100) / 100}
               </td>
               <td>{building.type}</td>
-              <td>{building.recipe.name}</td>
+              <td><RecipeSelector recipe={building.recipe} onChange={onRecipeSelectorChange} /></td>
               <td>
                 {Math.round(
                   building.recipe.outputQuantity *

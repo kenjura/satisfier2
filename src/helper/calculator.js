@@ -9,16 +9,24 @@ import Recipe from "../model/Recipe";
 export function getBuildingsForDesiredParts(
   desiredParts: Array<DesiredPartType>,
   recipes: Array<Recipe>,
-  enabledAlts: Array<Recipe>
+  enabledAlts: Array<Recipe>,
+  preferredRecipes: Array<Recipe>
 ): Array<Building> {
   const unmergedBuildingList = desiredParts
     .map((desiredPart) => {
       const { part, quantity } = convertDesiredPartToPartAndQuantity(
         desiredPart,
         recipes,
-        enabledAlts
+        enabledAlts,
+        preferredRecipes
       );
-      return getBuildingsForPart(part, quantity, recipes, enabledAlts);
+      return getBuildingsForPart(
+        part,
+        quantity,
+        recipes,
+        enabledAlts,
+        preferredRecipes
+      );
     })
     .flat();
 
@@ -46,13 +54,19 @@ export function getBuildingsForDesiredParts(
 export function convertDesiredPartToPartAndQuantity(
   desiredPart: DesiredPartType,
   recipes: Array<Recipe>,
-  enabledAlts: Array<Recipe>
+  enabledAlts: Array<Recipe>,
+  preferredRecipes: Array<Recipe>
 ): {
   part: Part,
   quantity: number,
 } {
   const part = new Part({ name: desiredPart.name }); // todo: don't fake it, grab a real Part
-  const recipe = getBestRecipeForPart(part, recipes, enabledAlts);
+  const recipe = getBestRecipeForPart(
+    part,
+    recipes,
+    enabledAlts,
+    preferredRecipes
+  );
   if (!recipe)
     throw new Error(`could not find recipe for part "${desiredPart.name}`);
   const quantity = desiredPart.buildingQuantity * recipe.outputQuantity;
@@ -74,9 +88,15 @@ export function getBuildingsForPart(
   quantity: number,
   recipes: Array<Recipe>,
   enabledAlts: Array<Recipe>,
+  preferredRecipes: Array<Recipe>,
   stack: number = 0
 ): Array<Building> {
-  const recipe = getBestRecipeForPart(part, recipes, enabledAlts);
+  const recipe = getBestRecipeForPart(
+    part,
+    recipes,
+    enabledAlts,
+    preferredRecipes
+  );
   if (!recipe) {
     throw new Error(`unable to find recipe for part "${part.name}"`);
   }
@@ -94,13 +114,14 @@ export function getBuildingsForPart(
   ];
 
   if (recipe.inputPart1 && recipe.inputPart1.name !== "") {
-    // TODO: loop this
+    // TODO: loop instead of recursion
     buildings.push(
       ...getBuildingsForPart(
         recipe.inputPart1,
         (recipe.inputQuantity1 || 0) * buildingQuantity,
         recipes,
         enabledAlts,
+        preferredRecipes,
         stack - 1
       )
     );
@@ -113,6 +134,7 @@ export function getBuildingsForPart(
         (recipe.inputQuantity2 || 0) * buildingQuantity,
         recipes,
         enabledAlts,
+        preferredRecipes,
         stack - 1
       )
     );
@@ -125,6 +147,7 @@ export function getBuildingsForPart(
         (recipe.inputQuantity3 || 0) * buildingQuantity,
         recipes,
         enabledAlts,
+        preferredRecipes,
         stack - 1
       )
     );
@@ -137,6 +160,7 @@ export function getBuildingsForPart(
         (recipe.inputQuantity4 || 0) * buildingQuantity,
         recipes,
         enabledAlts,
+        preferredRecipes,
         stack - 1
       )
     );
@@ -148,8 +172,15 @@ export function getBuildingsForPart(
 export function getBestRecipeForPart(
   part: Part,
   recipes: Array<Recipe>,
-  enabledAlts: Array<Recipe>
+  enabledAlts: Array<Recipe>,
+  preferredRecipes: Array<Recipe>
 ): Recipe {
+  const preferredRecipeMatch = preferredRecipes.filter(
+    (rec) => rec.outputPart.name === part.name
+  );
+  if (preferredRecipeMatch.length) {
+    return preferredRecipeMatch[0];
+  }
   const allRecipesForPart = recipes.filter(
     (recipe) => recipe.outputPart.name === part.name
   );
