@@ -1,3 +1,9 @@
+# 0.11.0
+- 2022-08-25
+- added ability to select custom recipe for each part in the calculator results, instead of the default (i.e. the one with highest altScore)
+- updated recipe data to sync with game
+- overhauled recipe data JSON format
+
 # 0.10.0
 - Added missing recipes
 - Fixed stack logic
