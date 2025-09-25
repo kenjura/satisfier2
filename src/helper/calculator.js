@@ -98,7 +98,8 @@ export function getBuildingsForPart(
     preferredRecipes
   );
   if (!recipe) {
-    throw new Error(`unable to find recipe for part "${part.name}"`);
+    // throw new Error(`unable to find recipe for part "${part.name}"`);
+    return null;
   }
 
   // part = high speed connector, quantity = 15, buildingQuantity = 4

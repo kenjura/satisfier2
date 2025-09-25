@@ -10,7 +10,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Iron Rod",
@@ -23,7 +30,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Iron Ingot",
@@ -36,7 +50,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Nitro Rocket Fuel",
@@ -49,7 +70,14 @@ export default [
     "item3": "Sulfur",
     "item3Qty": 100,
     "item4": "Coal",
-    "item4Qty": 50
+    "item4Qty": 50,
+    "building": null,
+    "byproduct": "Compacted Coal",
+    "byproductQty": 25,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53
   },
   {
     "recipe": "Rocket Fuel",
@@ -62,7 +90,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Compacted Coal",
+    "byproductQty": 10,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Rocket Fuel",
@@ -75,7 +110,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Rocket Fuel",
@@ -88,7 +130,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Fluid Tank",
+    "byproductQty": 60,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Ionized Fuel",
@@ -101,7 +150,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Compacted Coal",
+    "byproductQty": 5,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Ionized Fuel",
@@ -114,7 +170,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Ionized Fuel",
@@ -127,7 +190,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Fluid Tank",
+    "byproductQty": 40,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "SAM Fluctuator",
@@ -140,7 +210,14 @@ export default [
     "item3": "Steel Pipe",
     "item3Qty": 30,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Ficsite Trigon",
@@ -153,7 +230,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Reanimated SAM",
@@ -166,7 +250,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Biochemical Sculptor",
@@ -179,7 +270,14 @@ export default [
     "item3": "Water",
     "item3Qty": 10,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Turbofuel",
@@ -192,7 +290,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Turbofuel",
@@ -205,7 +310,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Turbofuel",
@@ -218,7 +330,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 20,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Charcoal",
@@ -231,7 +350,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Biocoal",
@@ -244,7 +370,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Compacted Coal",
@@ -257,7 +390,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Circuit Board",
@@ -270,7 +410,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Fuel",
@@ -283,7 +430,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Polymer Resin",
+    "byproductQty": 30,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Petroleum Coke",
@@ -296,7 +450,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Plastic",
@@ -309,7 +470,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Heavy Oil Residue",
+    "byproductQty": 10,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Rubber",
@@ -322,7 +490,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Heavy Oil Residue",
+    "byproductQty": 20,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Residual Fuel",
@@ -335,7 +510,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Residual Plastic",
@@ -348,7 +530,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Residual Rubber",
@@ -361,7 +550,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Wet Concrete",
@@ -374,7 +570,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 59.2
   },
   {
     "recipe": "Alternate: Turbo Heavy Fuel",
@@ -387,7 +590,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Steel Rod",
@@ -400,7 +610,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 64.2
   },
   {
     "recipe": "Steel Beam",
@@ -413,7 +630,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Steel Pipe",
@@ -426,7 +650,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Steel Ingot",
@@ -439,7 +670,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Versatile Framework",
@@ -452,7 +690,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Steel Canister",
@@ -465,7 +710,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Empty Canister",
@@ -478,7 +730,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Fuel",
@@ -491,7 +750,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Liquid Biofuel",
@@ -504,7 +770,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Liquid Biofuel",
@@ -517,7 +790,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Oil",
@@ -530,7 +810,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Heavy Oil Residue",
@@ -543,7 +830,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Water",
@@ -556,7 +850,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Liquid Biofuel",
@@ -569,7 +870,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 60,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Fuel",
@@ -582,7 +890,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 60,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Oil",
@@ -595,7 +910,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 60,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Heavy Oil Residue",
@@ -608,7 +930,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 20,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Water",
@@ -621,7 +950,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 120,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Steamed Copper Sheet",
@@ -634,7 +970,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 52.9
   },
   {
     "recipe": "Alternate: Rubber Concrete",
@@ -647,7 +990,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 67.4
   },
   {
     "recipe": "Alternate: Recycled Rubber",
@@ -660,7 +1010,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Pure Quartz Crystal",
@@ -673,7 +1030,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 51.9
   },
   {
     "recipe": "Quartz Crystal",
@@ -686,7 +1050,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Pure Iron Ingot",
@@ -699,7 +1070,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Pure Copper Ingot",
@@ -712,7 +1090,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Pure Caterium Ingot",
@@ -725,7 +1110,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Pure Aluminum Ingot",
@@ -738,7 +1130,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 92
   },
   {
     "recipe": "Aluminum Casing",
@@ -751,7 +1150,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alclad Aluminum Sheet",
@@ -764,7 +1170,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alumina Solution",
@@ -777,7 +1190,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Silica",
+    "byproductQty": 50,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Aluminum Scrap",
@@ -790,7 +1210,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Desc_Water_C",
+    "byproductQty": 120000,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Alumina Solution",
@@ -803,7 +1230,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Aluminum Ingot",
@@ -816,7 +1250,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Silica",
@@ -829,7 +1270,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Crystal Oscillator",
@@ -842,7 +1290,14 @@ export default [
     "item3": "Reinforced Iron Plate",
     "item3Qty": 2.5,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Alumina Solution",
@@ -855,7 +1310,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 120,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Polymer Resin",
@@ -868,7 +1330,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Heavy Oil Residue",
+    "byproductQty": 20,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Plastic Smart Plating",
@@ -881,7 +1350,14 @@ export default [
     "item3": "Plastic",
     "item3Qty": 7.5,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53.2
   },
   {
     "recipe": "Alternate: Automated Speed Wiring",
@@ -894,7 +1370,14 @@ export default [
     "item3": "High-Speed Connector",
     "item3Qty": 1.875,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 59.2
   },
   {
     "recipe": "Encased Industrial Beam",
@@ -907,7 +1390,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Motor",
@@ -920,7 +1410,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Stator",
@@ -933,7 +1430,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Automated Wiring",
@@ -946,7 +1450,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "AI Limiter",
@@ -959,7 +1470,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Heavy Oil Residue",
@@ -972,7 +1490,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Polymer Resin",
+    "byproductQty": 20,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Heavy Flexible Frame",
@@ -985,7 +1510,14 @@ export default [
     "item3": "Rubber",
     "item3Qty": 75,
     "item4": "Screws",
-    "item4Qty": 390
+    "item4Qty": 390,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 86.7
   },
   {
     "recipe": "Computer",
@@ -998,7 +1530,14 @@ export default [
     "item3": "Plastic",
     "item3Qty": 40,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Heavy Modular Frame",
@@ -1011,7 +1550,14 @@ export default [
     "item3": "Encased Industrial Beam",
     "item3Qty": 10,
     "item4": "Screws",
-    "item4Qty": 240
+    "item4Qty": 240,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Modular Engine",
@@ -1024,7 +1570,14 @@ export default [
     "item3": "Smart Plating",
     "item3Qty": 2,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Adaptive Control Unit",
@@ -1037,7 +1590,14 @@ export default [
     "item3": "Heavy Modular Frame",
     "item3Qty": 1,
     "item4": "Computer",
-    "item4Qty": 2
+    "item4Qty": 2,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Fused Wire",
@@ -1050,7 +1610,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53.2
   },
   {
     "recipe": "Alternate: Flexible Framework",
@@ -1063,7 +1630,14 @@ export default [
     "item3": "Rubber",
     "item3Qty": 30,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Electrode Circuit Board",
@@ -1076,7 +1650,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Electrode Aluminum Scrap",
@@ -1089,7 +1670,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Desc_Water_C",
+    "byproductQty": 105000,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 71
   },
   {
     "recipe": "Alternate: Diluted Packaged Fuel",
@@ -1102,7 +1690,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Copper Rotor",
@@ -1115,7 +1710,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53.2
   },
   {
     "recipe": "Modular Frame",
@@ -1128,7 +1730,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Rotor",
@@ -1141,7 +1750,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Copper Sheet",
@@ -1154,7 +1770,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Smart Plating",
@@ -1167,7 +1790,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Copper Alloy Ingot",
@@ -1180,7 +1810,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 92.3
   },
   {
     "recipe": "Alternate: Coke Steel Ingot",
@@ -1193,7 +1830,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 59
   },
   {
     "recipe": "Alternate: Coated Iron Plate",
@@ -1206,7 +1850,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 55.8
   },
   {
     "recipe": "Alternate: Coated Iron Canister",
@@ -1219,7 +1870,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Coated Cable",
@@ -1232,7 +1890,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53.3
   },
   {
     "recipe": "Alternate: Bolted Frame",
@@ -1245,7 +1910,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Adhered Iron Plate",
@@ -1258,7 +1930,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 55.7
   },
   {
     "recipe": "Alternate: Turbo Pressure Motor",
@@ -1271,7 +1950,14 @@ export default [
     "item3": "Packaged Nitrogen Gas",
     "item3Qty": 45,
     "item4": "Stator",
-    "item4Qty": 15
+    "item4Qty": 15,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 67.9
   },
   {
     "recipe": "Encased Plutonium Cell",
@@ -1284,7 +1970,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Pressure Conversion Cube",
@@ -1297,7 +1990,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Nitric Acid",
@@ -1310,7 +2010,14 @@ export default [
     "item3": "Iron Plate",
     "item3Qty": 10,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Non-Fissile Uranium",
@@ -1323,7 +2030,14 @@ export default [
     "item3": "Nitric Acid",
     "item3Qty": 15,
     "item4": "Sulfuric Acid",
-    "item4Qty": 15
+    "item4Qty": 15,
+    "building": null,
+    "byproduct": "Desc_Water_C",
+    "byproductQty": 15000,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Copper Powder",
@@ -1336,7 +2050,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Plutonium Fuel Rod",
@@ -1349,7 +2070,14 @@ export default [
     "item3": "Electromagnetic Control Rod",
     "item3Qty": 1.5,
     "item4": "Heat Sink",
-    "item4Qty": 2.5
+    "item4Qty": 2.5,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Nitric Acid",
@@ -1362,7 +2090,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Nitric Acid",
@@ -1375,7 +2110,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Fluid Tank",
+    "byproductQty": 20,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Turbo Blend Fuel",
@@ -1388,7 +2130,14 @@ export default [
     "item3": "Sulfur",
     "item3Qty": 22.5,
     "item4": "Petroleum Coke",
-    "item4Qty": 22.5
+    "item4Qty": 22.5,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Encased Uranium Cell",
@@ -1401,7 +2150,14 @@ export default [
     "item3": "Sulfuric Acid",
     "item3Qty": 40,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Sulfuric Acid",
+    "byproductQty": 10,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Cooling System",
@@ -1414,7 +2170,14 @@ export default [
     "item3": "Water",
     "item3Qty": 30,
     "item4": "Nitrogen Gas",
-    "item4Qty": 150
+    "item4Qty": 150,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Battery",
@@ -1427,7 +2190,14 @@ export default [
     "item3": "Aluminum Casing",
     "item3Qty": 20,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Desc_Water_C",
+    "byproductQty": 30000,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Supercomputer",
@@ -1440,7 +2210,14 @@ export default [
     "item3": "High-Speed Connector",
     "item3Qty": 5.625,
     "item4": "Plastic",
-    "item4Qty": 52.5
+    "item4Qty": 52.5,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Radio Control Unit",
@@ -1453,7 +2230,14 @@ export default [
     "item3": "Computer",
     "item3Qty": 2.5,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Sulfuric Acid",
@@ -1466,7 +2250,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Sulfuric Acid",
@@ -1479,7 +2270,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Assembly Director System",
@@ -1492,7 +2290,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "High-Speed Connector",
@@ -1505,7 +2310,14 @@ export default [
     "item3": "Circuit Board",
     "item3Qty": 3.75,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Sulfuric Acid",
@@ -1518,7 +2330,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Canister",
+    "byproductQty": 60,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Super-State Computer",
@@ -1531,7 +2350,14 @@ export default [
     "item3": "Battery",
     "item3Qty": 24,
     "item4": "Wire",
-    "item4Qty": 60
+    "item4Qty": 60,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 73.3
   },
   {
     "recipe": "Electromagnetic Control Rod",
@@ -1544,7 +2370,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Uranium Fuel Rod",
@@ -1557,7 +2390,14 @@ export default [
     "item3": "Electromagnetic Control Rod",
     "item3Qty": 2,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Magnetic Field Generator",
@@ -1570,7 +2410,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Sloppy Alumina",
@@ -1583,7 +2430,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 86.1
   },
   {
     "recipe": "Alternate: Radio Control System",
@@ -1596,7 +2450,14 @@ export default [
     "item3": "Aluminum Casing",
     "item3Qty": 90,
     "item4": "Rubber",
-    "item4Qty": 45
+    "item4Qty": 45,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 57.1
   },
   {
     "recipe": "Alternate: Plutonium Fuel Unit",
@@ -1609,7 +2470,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: OC Supercomputer",
@@ -1622,7 +2490,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 52.8
   },
   {
     "recipe": "Heat Sink",
@@ -1635,7 +2510,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Fused Modular Frame",
@@ -1648,7 +2530,14 @@ export default [
     "item3": "Nitrogen Gas",
     "item3Qty": 37.5,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Empty Fluid Tank",
@@ -1661,7 +2550,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Packaged Nitrogen Gas",
@@ -1674,7 +2570,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Unpackage Nitrogen Gas",
@@ -1687,7 +2590,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Empty Fluid Tank",
+    "byproductQty": 60,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Instant Scrap",
@@ -1700,7 +2610,14 @@ export default [
     "item3": "Sulfuric Acid",
     "item3Qty": 50,
     "item4": "Water",
-    "item4Qty": 60
+    "item4Qty": 60,
+    "building": null,
+    "byproduct": "Desc_Water_C",
+    "byproductQty": 50000,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Heat-Fused Frame",
@@ -1713,7 +2630,14 @@ export default [
     "item3": "Nitric Acid",
     "item3Qty": 24,
     "item4": "Fuel",
-    "item4Qty": 30
+    "item4Qty": 30,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 78.8
   },
   {
     "recipe": "Alternate: Fertile Uranium",
@@ -1726,7 +2650,14 @@ export default [
     "item3": "Nitric Acid",
     "item3Qty": 15,
     "item4": "Sulfuric Acid",
-    "item4Qty": 25
+    "item4Qty": 25,
+    "building": null,
+    "byproduct": "Desc_Water_C",
+    "byproductQty": 40000,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Electric Motor",
@@ -1739,7 +2670,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 60
   },
   {
     "recipe": "Alternate: Diluted Fuel",
@@ -1752,7 +2690,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 69.6
   },
   {
     "recipe": "Alternate: Cooling Device",
@@ -1765,7 +2710,14 @@ export default [
     "item3": "Nitrogen Gas",
     "item3Qty": 60,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 51.9
   },
   {
     "recipe": "Alternate: Classic Battery",
@@ -1778,7 +2730,14 @@ export default [
     "item3": "Plastic",
     "item3Qty": 60,
     "item4": "Wire",
-    "item4Qty": 90
+    "item4Qty": 90,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Automated Miner",
@@ -1791,7 +2750,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Alclad Casing",
@@ -1804,7 +2770,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Molded Steel Pipe",
@@ -1817,7 +2790,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Iron Pipe",
@@ -1830,7 +2810,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Steel Cast Plate",
@@ -1843,7 +2830,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53.1
   },
   {
     "recipe": "Alternate: Molded Beam",
@@ -1856,7 +2850,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Aluminum Beam",
@@ -1869,7 +2870,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 62.6
   },
   {
     "recipe": "Alternate: Aluminum Rod",
@@ -1882,7 +2890,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 61
   },
   {
     "recipe": "Alternate: Plastic AI Limiter",
@@ -1895,7 +2910,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 66.7
   },
   {
     "recipe": "Alternate: Distilled Silica",
@@ -1908,7 +2930,14 @@ export default [
     "item3": "Water",
     "item3Qty": 100,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Desc_Water_C",
+    "byproductQty": 80000,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Quartz Purification",
@@ -1921,7 +2950,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": "Dissolved Silica",
+    "byproductQty": 60,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Fused Quartz Crystal",
@@ -1934,7 +2970,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Leached Iron Ingot",
@@ -1947,7 +2990,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Basic Iron Ingot",
@@ -1960,7 +3010,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Tempered Copper Ingot",
@@ -1973,7 +3030,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Leached Copper Ingot",
@@ -1986,7 +3050,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Tempered Caterium Ingot",
@@ -1999,7 +3070,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 52.2
   },
   {
     "recipe": "Alternate: Leached Caterium Ingot",
@@ -2012,7 +3090,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Caterium Wire",
@@ -2025,7 +3110,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 51.7
   },
   {
     "recipe": "Alternate: Iron Wire",
@@ -2038,7 +3130,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Infused Uranium Cell",
@@ -2051,7 +3150,14 @@ export default [
     "item3": "Sulfur",
     "item3Qty": 25,
     "item4": "Quickwire",
-    "item4Qty": 75
+    "item4Qty": 75,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 58.9
   },
   {
     "recipe": "Caterium Ingot",
@@ -2064,7 +3170,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Turbo Electric Motor",
@@ -2077,7 +3190,14 @@ export default [
     "item3": "Electromagnetic Control Rod",
     "item3Qty": 4.6875,
     "item4": "Rotor",
-    "item4Qty": 6.5625
+    "item4Qty": 6.5625,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 60.8
   },
   {
     "recipe": "Turbo Motor",
@@ -2090,7 +3210,14 @@ export default [
     "item3": "Motor",
     "item3Qty": 7.5,
     "item4": "Rubber",
-    "item4Qty": 45
+    "item4Qty": 45,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Thermal Propulsion Rocket",
@@ -2103,7 +3230,14 @@ export default [
     "item3": "Cooling System",
     "item3Qty": 3,
     "item4": "Fused Modular Frame",
-    "item4Qty": 1
+    "item4Qty": 1,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Quickwire Stator",
@@ -2116,7 +3250,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 51.6
   },
   {
     "recipe": "Alternate: Cheap Silica",
@@ -2129,7 +3270,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Steel Screws",
@@ -2142,7 +3290,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Cast Screws",
@@ -2155,7 +3310,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Steel Rotor",
@@ -2168,7 +3330,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 52.5
   },
   {
     "recipe": "Alternate: Encased Industrial Pipe",
@@ -2181,7 +3350,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Stitched Iron Plate",
@@ -2194,7 +3370,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53.7
   },
   {
     "recipe": "Alternate: Bolted Iron Plate",
@@ -2207,7 +3390,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Radio Connection Unit",
@@ -2220,7 +3410,14 @@ export default [
     "item3": "Quartz Crystal",
     "item3Qty": 45,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Fused Quickwire",
@@ -2233,7 +3430,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Recycled Plastic",
@@ -2246,7 +3450,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 56
   },
   {
     "recipe": "Alternate: Uranium Fuel Unit",
@@ -2259,7 +3470,14 @@ export default [
     "item3": "Crystal Oscillator",
     "item3Qty": 0.6000000000000001,
     "item4": "Rotor",
-    "item4Qty": 2
+    "item4Qty": 2,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 78.3
   },
   {
     "recipe": "Alternate: Rigor Motor",
@@ -2272,7 +3490,14 @@ export default [
     "item3": "Crystal Oscillator",
     "item3Qty": 1.25,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 64.4
   },
   {
     "recipe": "Alternate: Steeled Frame",
@@ -2285,7 +3510,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 63.1
   },
   {
     "recipe": "Alternate: Compacted Steel Ingot",
@@ -2298,7 +3530,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Solid Steel Ingot",
@@ -2311,7 +3550,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 56.4
   },
   {
     "recipe": "Alternate: Iron Alloy Ingot",
@@ -2324,7 +3570,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Silicon High-Speed Connector",
@@ -2337,7 +3590,14 @@ export default [
     "item3": "Circuit Board",
     "item3Qty": 3,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 57.1
   },
   {
     "recipe": "Alternate: Heavy Encased Frame",
@@ -2350,7 +3610,14 @@ export default [
     "item3": "Steel Pipe",
     "item3Qty": 33.75,
     "item4": "Concrete",
-    "item4Qty": 20.625
+    "item4Qty": 20.625,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 97.7
   },
   {
     "recipe": "Alternate: Heat Exchanger",
@@ -2363,7 +3630,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 56.1
   },
   {
     "recipe": "Alternate: Fine Black Powder",
@@ -2376,7 +3650,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Electromagnetic Connection Rod",
@@ -2389,7 +3670,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 51.8
   },
   {
     "recipe": "Alternate: Insulated Crystal Oscillator",
@@ -2402,7 +3690,14 @@ export default [
     "item3": "AI Limiter",
     "item3Qty": 1.875,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 83
   },
   {
     "recipe": "Alternate: Fine Concrete",
@@ -2415,7 +3710,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 63.5
   },
   {
     "recipe": "Alternate: Crystal Computer",
@@ -2428,7 +3730,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 79.1
   },
   {
     "recipe": "Alternate: Caterium Computer",
@@ -2441,7 +3750,14 @@ export default [
     "item3": "Rubber",
     "item3Qty": 22.5,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 71.3
   },
   {
     "recipe": "Alternate: Caterium Circuit Board",
@@ -2454,7 +3770,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 77.2
   },
   {
     "recipe": "Alternate: Silicon Circuit Board",
@@ -2467,7 +3790,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 80.4
   },
   {
     "recipe": "Alternate: Quickwire Cable",
@@ -2480,7 +3810,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 51.7
   },
   {
     "recipe": "Alternate: Insulated Cable",
@@ -2493,7 +3830,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": 53.7
   },
   {
     "recipe": "Singularity Cell",
@@ -2506,7 +3850,14 @@ export default [
     "item3": "Iron Plate",
     "item3Qty": 100,
     "item4": "Concrete",
-    "item4Qty": 200
+    "item4Qty": 200,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Ballistic Warp Drive",
@@ -2519,7 +3870,14 @@ export default [
     "item3": "Superposition Oscillator",
     "item3Qty": 2,
     "item4": "Dark Matter Crystal",
-    "item4Qty": 40
+    "item4Qty": 40,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Iodine-Infused Filter",
@@ -2532,7 +3890,14 @@ export default [
     "item3": "Aluminum Casing",
     "item3Qty": 3.75,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Quickwire",
@@ -2545,7 +3910,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Solid Biofuel",
@@ -2558,7 +3930,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Hog Protein",
@@ -2571,7 +3950,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Spitter Protein",
@@ -2584,7 +3970,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Biomass (Mycelia)",
@@ -2597,7 +3990,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Power Shard (1)",
@@ -2610,7 +4010,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Black Powder",
@@ -2623,7 +4030,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Stinger Protein",
@@ -2636,7 +4050,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Hatcher Protein",
@@ -2649,7 +4070,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alien DNA Capsule",
@@ -2662,7 +4090,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Biomass (Alien Protein)",
@@ -2675,7 +4110,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Iron Rebar",
@@ -2688,7 +4130,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Homing Rifle Ammo",
@@ -2701,7 +4150,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Stun Rebar",
@@ -2714,7 +4170,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Gas Filter",
@@ -2727,7 +4190,14 @@ export default [
     "item3": "Iron Plate",
     "item3Qty": 15,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Gas Nobelisk",
@@ -2740,7 +4210,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Alternate: Polyester Fabric",
@@ -2753,7 +4230,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Fabric",
@@ -2766,7 +4250,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Power Shard (5)",
@@ -2779,7 +4270,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Power Shard (2)",
@@ -2792,7 +4290,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Pulse Nobelisk",
@@ -2805,7 +4310,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Shatter Rebar",
@@ -2818,7 +4330,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Turbo Rifle Ammo",
@@ -2831,7 +4350,14 @@ export default [
     "item3": "Packaged Turbofuel",
     "item3Qty": 15,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Turbo Rifle Ammo",
@@ -2844,7 +4370,14 @@ export default [
     "item3": "Turbofuel",
     "item3Qty": 15,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Nuke Nobelisk",
@@ -2857,7 +4390,14 @@ export default [
     "item3": "Smokeless Powder",
     "item3Qty": 5,
     "item4": "AI Limiter",
-    "item4Qty": 3
+    "item4Qty": 3,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Rifle Ammo",
@@ -2870,7 +4410,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Explosive Rebar",
@@ -2883,7 +4430,14 @@ export default [
     "item3": "Steel Pipe",
     "item3Qty": 10,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Cluster Nobelisk",
@@ -2896,7 +4450,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Nobelisk",
@@ -2909,7 +4470,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Smokeless Powder",
@@ -2922,7 +4490,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "FICSMAS Wreath",
@@ -2935,7 +4510,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Snowball",
@@ -2948,7 +4530,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "FICSMAS Wonder Star",
@@ -2961,7 +4550,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Copper FICSMAS Ornament",
@@ -2974,7 +4570,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Iron FICSMAS Ornament",
@@ -2987,7 +4590,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "FICSMAS Ornament Bundle",
@@ -3000,7 +4610,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Red FICSMAS Ornament",
@@ -3013,7 +4630,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Blue FICSMAS Ornament",
@@ -3026,7 +4650,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "FICSMAS Actual Snow",
@@ -3039,7 +4670,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "FICSMAS Tree Branch",
@@ -3052,7 +4690,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "FICSMAS Bow",
@@ -3065,7 +4710,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Candy Cane",
@@ -3078,7 +4730,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Biomass (Leaves)",
@@ -3091,7 +4750,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Biomass (Wood)",
@@ -3104,7 +4770,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Reinforced Iron Plate",
@@ -3117,7 +4790,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Concrete",
@@ -3130,7 +4810,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Screws",
@@ -3143,7 +4830,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Cable",
@@ -3156,7 +4850,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Wire",
@@ -3169,7 +4870,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Copper Ingot",
@@ -3182,7 +4890,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Sweet Fireworks",
@@ -3195,7 +4910,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Fancy Fireworks",
@@ -3208,7 +4930,14 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   },
   {
     "recipe": "Sparkly Fireworks",
@@ -3221,6 +4950,13 @@ export default [
     "item3": null,
     "item3Qty": null,
     "item4": null,
-    "item4Qty": null
+    "item4Qty": null,
+    "building": null,
+    "byproduct": null,
+    "byproductQty": null,
+    "megawatts": null,
+    "stage": null,
+    "alternate": "no",
+    "altScore": null
   }
 ];

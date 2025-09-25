@@ -1,3 +1,8 @@
+# Current Branch
+- [ ] Upgrade to node 24
+- [ ] Fix "no recipe found" issue for ores
+
+
 # Bugs
 - Detect when a recipe is impossible (i.e. some recipes use Polymer Resin which can't be produced directly, only by alternate recipes)
   - Another example: electrode aluminum scrap -> petroleum coke
