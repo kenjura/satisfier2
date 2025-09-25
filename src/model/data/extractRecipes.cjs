@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const altScoreMap = require('./altScores.cjs').default;
 
 const inputPath = path.join(__dirname, 'data', 'raw-data-20250917.json');
 
@@ -59,6 +60,27 @@ function extractRecipes(data) {
       }
    */
 
+  // create a Map of building class name to display name
+  const buildingNameMap = new Map();
+  if (data && Array.isArray(data)) {
+    for (const obj of data) {
+      if (obj.NativeClass === "/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildableManufacturer'" && Array.isArray(obj.Classes)) {
+        for (const cls of obj.Classes) {
+          if (cls.ClassName && cls.mDisplayName) {
+            buildingNameMap.set(cls.ClassName, cls.mDisplayName);
+          }
+        }
+      }
+    }
+  }
+
+  // create a map of recipe display name to alt score
+  // altScoreMap is imported from altScores.js
+  const altScoreMap = new Map();
+  altScores.forEach(entry => {
+    altScoreMap.set(entry.recipe, entry.score);
+  });
+
   // create a Map of part class name to display name
   const partNameMap = new Map();
   if (data && Array.isArray(data)) {
@@ -79,7 +101,7 @@ function extractRecipes(data) {
       if (obj.NativeClass === "/Script/CoreUObject.Class'/Script/FactoryGame.FGItemDescriptor'" && Array.isArray(obj.Classes)) {
         for (const cls of obj.Classes) {
           if (cls.ClassName) {
-            const form = cls.mForm === 'RESOURCE_LIQUID' ? 'liquid' : 'solid';
+            const form = cls.mForm === 'RF_SOLID' ? 'solid' : 'liquid';
             rawResourceFormMap.set(cls.ClassName, form);
           }
         }
@@ -87,12 +109,14 @@ function extractRecipes(data) {
     }
   }
   const rawResourceNameMap = new Map();
+  const wtfFormMap = new Map();
   if (data && Array.isArray(data)) {
     for (const obj of data) {
-      if (obj.NativeClass === "/Script/CoreUObject.Class'/Script/FactoryGame.FGResourceDescriptor'" && Array.isArray(obj.Classes)) {
+      if ((obj.NativeClass === "/Script/CoreUObject.Class'/Script/FactoryGame.FGResourceDescriptor'" || obj.NativeClass==="/Script/CoreUObject.Class'/Script/FactoryGame.FGItemDescriptorBiomass'") && Array.isArray(obj.Classes)) {
         for (const cls of obj.Classes) {
           if (cls.ClassName && cls.mDisplayName) {
             rawResourceNameMap.set(cls.ClassName, cls.mDisplayName);
+            wtfFormMap.set(cls.ClassName, cls.mForm === 'RF_SOLID' ? 'solid' : 'liquid');
           }
         }
       }
@@ -101,12 +125,14 @@ function extractRecipes(data) {
 
   // create a Map of recipe class name to complete class object
   const classMap = new Map();
+  const recipeBuildingMap = new Map();
   if (data && Array.isArray(data)) {
     for (const obj of data) {
       if (obj.NativeClass === "/Script/CoreUObject.Class'/Script/FactoryGame.FGRecipe'" && Array.isArray(obj.Classes)) {
         for (const cls of obj.Classes) {
           if (cls.ClassName) {
             classMap.set(cls.ClassName, cls);
+            recipeBuildingMap.set(cls.ClassName, buildingNameMap.get(cls.mProducedIn) || null);
           }
         }
       }
@@ -158,7 +184,8 @@ function extractRecipes(data) {
             } else {
             displayName = className || '';
             }
-          ingredients.push({ item: displayName, amount: ing.Amount });
+            let isLiquid = rawResourceFormMap.get(className) === 'liquid' || wtfFormMap.get(className) === 'liquid';
+          ingredients.push({ item: displayName, amount: ing.Amount, isLiquid });
         }
       } catch (e) {
         console.error(`Error parsing ingredients for ${className}:`, e);
@@ -168,18 +195,6 @@ function extractRecipes(data) {
     let multiplier = 1;
     if (entry.mManufactoringDuration && !isNaN(Number(entry.mManufactoringDuration))) {
       multiplier = 60 / Number(entry.mManufactoringDuration);
-    }
-    // If any ingredient is a liquid (according to rawResourceFormMap), divide multiplier by 1000
-    if (ingredients.some(ing => {
-      // Find className for this ingredient
-      for (const [className, displayName] of partNameMap.entries()) {
-      if (displayName === ing.item && rawResourceFormMap.get(className) === 'liquid') {
-        return true;
-      }
-      }
-      return false;
-    })) {
-      multiplier = multiplier / 1000;
     }
     if (entry.mProduct) {
       try {
@@ -201,6 +216,10 @@ function extractRecipes(data) {
         let displayName = className && partNameMap.has(className)
         ? partNameMap.get(className)
         : className || '';
+        let isLiquid = rawResourceFormMap.get(className) === 'liquid';
+        if (isLiquid) {
+          prod.Amount = prod.Amount / 1000; // convert to mL
+        }
         products.push({ item: displayName, amount: prod.Amount * multiplier });
       }
       } catch (e) {
@@ -209,6 +228,9 @@ function extractRecipes(data) {
     }
     // Adjust ingredient amounts as well
     for (const ing of ingredients) {
+      if (ing.isLiquid) {
+        ing.amount = ing.amount / 1000;
+      }
       ing.amount = ing.amount * multiplier;
     }
     if (products.length > 0) {
@@ -224,6 +246,14 @@ function extractRecipes(data) {
         item3Qty: ingredients[2] ? ingredients[2].amount : null,
         item4: ingredients[3] ? ingredients[3].item : null,
         item4Qty: ingredients[3] ? ingredients[3].amount : null,
+        building: recipeBuildingMap.get(className) || null,
+        byproduct: products[1] ? products[1].item : null,
+        byproductQty: products[1] ? products[1].amount : null,
+        megawatts: entry.mPowerConsumption || null,
+        stage: entry.mTechTier || null,
+        alternate: entry.bAlternateRecipe ? 'yes' : 'no',
+        altScore: altScoreMap.get(entry.mDisplayName) || null,
+        // altScore omitted
       };
       recipes.push(rec);
     }
